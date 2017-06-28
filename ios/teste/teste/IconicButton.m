@@ -30,17 +30,34 @@
     self.Descricao = [[UILabel alloc]init];
     self.Descricao.translatesAutoresizingMaskIntoConstraints = false;
     
-    self.leading = [NSLayoutConstraint constraintWithItem:self.Descricao attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.titleLabel attribute:NSLayoutAttributeLeading multiplier:1 constant:30];
+    self.leading = [NSLayoutConstraint constraintWithItem:self.Descricao 
+                                        attribute:NSLayoutAttributeLeading 
+                                        relatedBy:NSLayoutRelationEqual 
+                                        toItem:self.titleLabel 
+                                        attribute:NSLayoutAttributeLeading 
+                                        multiplier:1 constant:30];
     
     [self addConstraint:self.leading];
-    self.centerY = [NSLayoutConstraint constraintWithItem:self.Descricao attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.titleLabel attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    self.centerY = [NSLayoutConstraint constraintWithItem:self.Descricao 
+                                        attribute:NSLayoutAttributeCenterY 
+                                        relatedBy:NSLayoutRelationEqual 
+                                        toItem:self.titleLabel 
+                                        attribute:NSLayoutAttributeCenterY 
+                                        multiplier:1 constant:0];
     
     [self addConstraint:self.centerY];
-    self.trailing = [NSLayoutConstraint constraintWithItem:self.Descricao attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:0.98f constant:0];
+    self.trailing = [NSLayoutConstraint constraintWithItem:self.Descricao 
+                                        attribute:NSLayoutAttributeTrailing 
+                                        relatedBy:NSLayoutRelationEqual 
+                                        toItem:self 
+                                        attribute:NSLayoutAttributeTrailing 
+                                        multiplier:0.98f constant:0];
     
     [self addConstraint:self.trailing];
-    [self.Descricao setContentHuggingPriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
-    [self.Descricao setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
+    [self.Descricao setContentHuggingPriority:UILayoutPriorityDefaultLow 
+                    forAxis:UILayoutConstraintAxisHorizontal];
+    [self.Descricao setContentCompressionResistancePriority:UILayoutPriorityDefaultLow f
+                    orAxis:UILayoutConstraintAxisHorizontal];
     
     self.Descricao.textColor = [UIColor whiteColor];
     self.tamanho = [UIScreen mainScreen].bounds.size.width/25;
